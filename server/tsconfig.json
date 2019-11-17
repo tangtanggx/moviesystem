@@ -9,6 +9,7 @@
     "strictNullChecks": true, // null、undefined只能赋值自己
     "removeComments": true,
     "noEmitOnError": true, // 编译报错就不要生成结果了
+    "esModuleInterop": true
   },
   "include": ["./src"]
 }
