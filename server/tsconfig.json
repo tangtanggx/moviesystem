@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "outDir": "./dist",
+    "lib": ["esnext"], // 环境
+    "experimentalDecorators": true, // 允许使用装饰器
+    "emitDecoratorMetadata": true, // ts类型约束保存到元数据中
+    "strictNullChecks": true, // null、undefined只能赋值自己
+    "removeComments": true,
+    "noEmitOnError": true, // 编译报错就不要生成结果了
+  },
+  "include": ["./src"]
+}
