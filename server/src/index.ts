@@ -1,17 +1,17 @@
 import "reflect-metadata";
-import { Movie } from "./entities/Movie";
-import { validate } from "class-validator";
-import { plainToClass } from "class-transformer";
+import { MovieService } from "./services/MovieService";
 
-const m = {
-    name: "dsfg",
-    types: ["青春"],
+const m: any = {
+    name: "打针唐",
+    types: ["高校"],
     areas: ["中国"],
+    timeLength: 10
 };
 
-const movie = plainToClass(Movie, m);
-console.log(movie);
-
-// validate(movie).then(errors => {
-//     console.log(errors);
-// });
+MovieService.addMovie(m).then(result => {
+    if (Array.isArray(result)) {
+        console.log(result);
+    } else {
+        console.log(result._id);
+    }
+});
